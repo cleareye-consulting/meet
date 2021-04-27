@@ -12,6 +12,8 @@ function startMeeting(roomName, displayName) {
       displayName,
     },
   })
+  document.querySelector('#meetingLink').innerHTML = `The meeting link is ${document.URL}?meetingId=${roomName}`
+  document.querySelector('#startMeetingButton').setAttribute('disabled', 'disabled')
 }
 
 function getRandomRoomName() {
